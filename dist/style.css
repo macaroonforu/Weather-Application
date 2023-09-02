@@ -1,0 +1,24 @@
+html{
+    background-image: url(../background.jpg); 
+    background-size: 100vw 100vh; 
+    font-family: 'Manjari', sans-serif;
+}
+
+#daily{
+    background-color: grey; 
+    opacity: 0.4; 
+}
+
+#fail{
+    text-align: center; 
+    display: none; 
+}
+
+#failimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  

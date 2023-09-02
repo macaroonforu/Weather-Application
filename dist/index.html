@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../weather.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather Watcher</h1>
+    <input type="text" id="citySearch">
+    <button id="searchButton">Search a City</button>
+
+    <div id="success">
+        <div id="daily">
+            <h2 id="city-title">Toronto</h2>
+            <h3 id="date">September 2 2023</h3>
+            <button>See 3-Day Forecast</button>
+            <button>See Hourly Forecast</button>
+        </div>
+    
+        <div id="3day"></div>
+    
+        <div id="hourly"></div>
+    </div>
+
+    <div id="fail">
+        <h1>Sorry, we could not find data for the requested city</h1>
+        <img id="failimg" src="../fail.png">
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
