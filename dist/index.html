@@ -7,24 +7,52 @@
     <link rel="icon" href="../weather.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js" data-auto-a11y="true"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script> 
+     <script defer src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <title>Weather App</title>
 </head>
 <body>
-    <h1>Weather Watcher</h1>
-    <input type="text" id="citySearch">
-    <button id="searchButton">Search a City</button>
+    <div id="header">
+        <h1>Weather Watcher</h1>
+        <input type="search" placeholder="Enter the name of a city" id="citySearch">
+        <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+
+    </div>
+ 
 
     <div id="success">
         <div id="daily">
-            <h2 id="city-title">Toronto</h2>
-            <h3 id="date">September 2 2023</h3>
-            <button>See 3-Day Forecast</button>
-            <button>See Hourly Forecast</button>
+         <h2><span id="city-title" style="padding-bottom:10px"></span>, <span id="country"> </span><span id="country-icon-container"><img id="country-icon" style="vertical-align:middle; padding:10px;"></span></h2>     
+            <h3>Weather forecast as of: <span id="date"></span></h3>
+            <p>Current Condition: <span id="current_condition_text"></span></p>
+            <img id="current_condition_img">
+            <p>Current Temp: <span id="current_temp"></span></p>
+            <p>Feels Like: <span id="feels_like"></span></p>
+            <p>UV Index: <span id="uv-index"></span></p>
+            <p>Wind: <span id="wind"></span></p>
+
         </div>
     
-        <div id="3day"></div>
-    
-        <div id="hourly"></div>
+        <div id="three-day">
+            <h2>Three Day Forecast</h2>
+            <div id="three-day-grid">
+
+               
+                
+            </div>
+        </div>
+
+        <div id="hourly">
+            <h2>Hourly Forecast</h2>
+            <div id="hourly-grid">
+
+            </div>
+        </div>
+
+
+
     </div>
 
     <div id="fail">
