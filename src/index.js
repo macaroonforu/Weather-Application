@@ -7,7 +7,7 @@ button.addEventListener("click", search);
 function search(){
     console.log("hi"); 
     const searchTerm = document.getElementById("citySearch").value.trim().toLowerCase(); 
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=2172c71e82df4422b4e143223230209&q=${searchTerm}&days=3&aqi=no&alerts=no`, {mode: 'cors'})
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=2172c71e82df4422b4e143223230209&q=${searchTerm}&days=3&aqi=no&alerts=no`, {mode: 'cors'})
     .then(response => {
         if (!response.ok) {
         throw new Error('Server returned ' + response.status);
@@ -31,7 +31,7 @@ function search(){
 }
 
 function pageLoad(){
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=2172c71e82df4422b4e143223230209&q=toronto&days=3&aqi=no&alerts=no`, {mode: 'cors'})
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=2172c71e82df4422b4e143223230209&q=toronto&days=3&aqi=no&alerts=no`, {mode: 'cors'})
     .then(response => {
         if (!response.ok) {
         throw new Error('Server returned ' + response.status);
