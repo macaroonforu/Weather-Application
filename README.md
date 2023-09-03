@@ -1,5 +1,4 @@
 # Weather-Application
-A weather app that is going to fetch data from [Link](weatherapi.com)
+A weather app that is going to fetch data from [www.weatherapi.com](https://www.weatherapi.com/)
 
-
-Run npx webpack --watch every time you want to work on it. 
+View at this [Link](https://macaroonforu.github.io/Weather-Application/)
