@@ -34,7 +34,7 @@ function pageLoad(){
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=2172c71e82df4422b4e143223230209&q=toronto&days=3&aqi=no&alerts=no`, {mode: 'cors'})
     .then(response => {
         if (!response.ok) {
-        throw new Error('Server returned ' + response.status);
+        throw new Error('Server returned ' + response.status); 
         }
         return response.json();
     })
