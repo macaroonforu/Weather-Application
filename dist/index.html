@@ -15,8 +15,12 @@
 <body>
     <div id="header">
         <h1>Weather Watcher</h1>
-        <input type="search" placeholder="Enter the name of a city" id="citySearch">
-        <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+        <div id="searchDiv">
+            <input style="padding:5px;vertical-align:middle;border-radius:10px;border:2px solid black;" type="search" placeholder="Enter the name of a city or country..." id="citySearch">
+            <button style="vertical-align:middle;margin-left:10px;border:0px;background-color:rgba(0, 0, 0, 0.0);" id="searchButton"><span  class="iconify" data-icon="flat-color-icons:search"  width="40" height="40" data-inline="false"></span></button>
+        </div>
+     
 
 
     </div>
@@ -24,14 +28,14 @@
 
     <div id="success">
         <div id="daily">
-         <h2><span id="city-title" style="padding-bottom:10px"></span>, <span id="country"> </span><span id="country-icon-container"><img id="country-icon" style="vertical-align:middle; padding:10px;"></span></h2>     
-            <h3>Weather forecast as of: <span id="date"></span></h3>
-            <p>Current Condition: <span id="current_condition_text"></span></p>
+         <h2 style="font-size:1.5em;"><span id="city-title" style="padding-bottom:10px"></span>, <span id="country"> </span><span id="country-icon-container"><img id="country-icon" style="vertical-align:middle; padding:10px;"></span></h2>     
+            <h3 style="font-size:1.25em;"><span id="date" ></span></h3>
+            <p style="font-size:1.25em;"><span id="current_condition_text"></span></p>
             <img id="current_condition_img">
-            <p>Current Temp: <span id="current_temp"></span></p>
-            <p>Feels Like: <span id="feels_like"></span></p>
-            <p>UV Index: <span id="uv-index"></span></p>
-            <p>Wind: <span id="wind"></span></p>
+            <p style="font-size:1.25em;">Current Temp: <span id="current_temp"></span>    Feels Like: <span id="feels_like"></span></p>
+            <p></p>
+            <p style="font-size:1.25em;"><span class="iconify" data-icon="tabler:uv-index" data-inline="false"></span> UV Index: <span id="uv-index"></span></p>
+            <p style="font-size:1.25em;"><span class="iconify" data-icon="ph:wind-bold" data-inline="false"></span> Wind: <span id="wind"></span> km/hr</p>
 
         </div>
     

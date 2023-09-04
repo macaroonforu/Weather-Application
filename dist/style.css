@@ -2,6 +2,15 @@ html{
     background-image: url(background.jpg); 
     background-size: 100vw 100vh; 
     font-family: 'Manjari', sans-serif;
+    font-weight: bold; 
+    font-size: 1em; 
+}
+#header{
+    vertical-align: middle; 
+}
+#citySearch{
+    font-family: 'Manjari', sans-serif;
+
 }
 
 #daily{
@@ -26,6 +35,10 @@ html{
     background: rgba(57, 115, 163, 0.5);
     text-align: center; 
 }
+.day:hover{
+    background: rgba(90, 148, 196, 0.5);
+
+}
 
 
 #three-day-grid{
@@ -41,37 +54,48 @@ html{
 
 #hourly-grid{
     display: grid; 
-    grid-template-rows: repeat(3, 1fr); 
-    grid-template-columns: repeat(8, 1fr); 
-}
-  
-
-
-
-@media(max-width: 1400px){
-    #hourly-grid{
-        grid-template-rows:  repeat(4, 1fr); 
-        grid-template-columns: repeat(6, 1fr); 
-    }
-
+    grid-template-rows: 1fr; 
+    grid-template-columns: 1fr; 
 }
 
+
+.rowDiv{
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: 1fr; 
+}
+.arrow{
+    background-color:rgba(0, 0, 0, 0.0);
+    border: 0px; 
+}
+
+.buttonDiv{
+    text-align: center; 
+}
+.squareDiv:hover{
+    background: rgba(200, 218, 46, 0.7); 
+}
+/*
 @media(max-width: 1000px){
     #hourly-grid{
         grid-template-rows:  repeat(6, 1fr); 
         grid-template-columns: repeat(4, 1fr); 
     }
 
-}
+}*/
 
 @media(max-width: 680px){
     #three-day-grid{
         grid-template-rows:  repeat(3, 1fr); 
         grid-template-columns: 1fr; 
     }
-    #hourly-grid{
+    .rowDiv{
+        grid-template-rows: repeat(6, 1fr); 
+        grid-template-columns:  1fr; 
+    }
+    /*#hourly-grid{
         grid-template-rows:  repeat(12, 1fr); 
         grid-template-columns: repeat(2, 1fr); 
-    }
+    }*/
 
 }

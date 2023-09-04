@@ -1,6 +1,11 @@
+const {format} = require('date-fns');
+
+
+
+
 function current(mainData, location){
-    console.log("currentData", mainData);
-    console.log("Location", location); 
+    //console.log("currentData", mainData);
+    //console.log("Location", location); 
 
     const countrycode = countrycodes[location.country]; 
     
@@ -16,12 +21,12 @@ function current(mainData, location){
 
     document.getElementById("city-title").textContent = location.name; 
     document.getElementById("country").textContent = location.country; 
-    document.getElementById("date").textContent = location.localtime; 
+    document.getElementById("date").textContent = format(new Date(location.localtime),'EEEE MMMM do, yyyy p'); 
 
     document.getElementById("current_condition_text").textContent = mainData.condition.text; 
     document.getElementById("current_condition_img").src = mainData.condition.icon; 
-    document.getElementById("current_temp").textContent = mainData.temp_c; 
-    document.getElementById("feels_like").textContent = mainData.feelslike_c; 
+    document.getElementById("current_temp").innerHTML = `${mainData.temp_c} &#176; C`; 
+    document.getElementById("feels_like").innerHTML = `${mainData.feelslike_c}  &#176; C`; 
     document.getElementById("uv-index").textContent = mainData.uv; 
     document.getElementById("wind").textContent = mainData.wind_kph; 
 
@@ -145,8 +150,8 @@ const countrycodes = {'Afghanistan': 'AF',
 'Kazakhstan': 'KZ',
 'Kenya': 'KE',
 'Kiribati': 'KI',
-"Korea, Democratic People's Republic of": 'KP',
-'Korea, Republic of': 'KR',
+"North Korea": 'KP',
+'South Korea': 'KR',
 'Kuwait': 'KW',
 'Kyrgyzstan': 'KG',
 "Lao People's Democratic Republic": 'LA',
