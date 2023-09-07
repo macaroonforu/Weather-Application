@@ -29,6 +29,9 @@ html{
     margin-right: auto;
     width: 50%;
   }
+#success{
+    display: none; 
+}
 
 
 #three-day{

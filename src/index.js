@@ -19,7 +19,6 @@ function search(){
     })
     .then(data => {
         document.getElementById("fail").style.display="none"; 
-        document.getElementById("success").style.display="initial";
         console.log(data); 
         forecast(data.forecast.forecastday);
         hourly(data.forecast.forecastday[0].hour); 
@@ -28,6 +27,7 @@ function search(){
         showSlide(slideIndex); 
         document.querySelector(".prev").addEventListener("click", function() {plusSlides(-1);}); 
         document.querySelector(".next").addEventListener("click", function() {plusSlides(1);});
+        document.getElementById("success").style.display="initial";
     
     })
     .catch(error => {
@@ -48,7 +48,7 @@ function pageLoad(){
     })
     .then(data => {
         document.getElementById("fail").style.display="none"; 
-        document.getElementById("success").style.display="initial";
+        
         //console.log(data); 
         forecast(data.forecast.forecastday);
         console.log(slideIndex); 
@@ -57,6 +57,7 @@ function pageLoad(){
         document.querySelector(".prev").addEventListener("click", function() {plusSlides(-1);}); 
         document.querySelector(".next").addEventListener("click", function() {plusSlides(1);});
         current(data.current, data.location); 
+        document.getElementById("success").style.display="initial";
     })
     .catch(error => {
         const infodiv = document.getElementById("success");
