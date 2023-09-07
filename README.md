@@ -13,7 +13,7 @@
 ## Description
 A weather app that allows a user to type in the name of a country or city, then fetches data from [www.weatherapi.com](https://www.weatherapi.com/) and displays it for the user.
 
-**Note** There seems to be a small issue where sometimes the data will not load when you open the website, but if you clear your browser history, including cache/cookies, it should work. 
+**Note** There seems to be a small issue where sometimes the data will not load when you open the website on a tablet/mobile device, but if you clear your browser history, including cache/cookies, it should work. 
 
 <div align="center">
 
