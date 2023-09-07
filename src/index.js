@@ -27,6 +27,8 @@ function search(){
         showSlide(slideIndex); 
         document.querySelector(".prev").addEventListener("click", function() {plusSlides(-1);}); 
         document.querySelector(".next").addEventListener("click", function() {plusSlides(1);});
+        
+        
         document.getElementById("success").style.display="initial";
     
     })
@@ -57,6 +59,7 @@ function pageLoad(){
         document.querySelector(".prev").addEventListener("click", function() {plusSlides(-1);}); 
         document.querySelector(".next").addEventListener("click", function() {plusSlides(1);});
         current(data.current, data.location); 
+        document.getElementById("header").style.display="initial"; 
         document.getElementById("success").style.display="initial";
     })
     .catch(error => {

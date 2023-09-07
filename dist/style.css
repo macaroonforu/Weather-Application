@@ -7,6 +7,7 @@ html{
 }
 #header{
     vertical-align: middle; 
+    display: none; 
 }
 #citySearch{
     font-family: 'Manjari', sans-serif;
