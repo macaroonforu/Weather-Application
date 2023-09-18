@@ -14,18 +14,18 @@
      <script defer src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <title>Weather App</title>
 </head>
-<body>
-    <div id="header">
+<body class="pl">
+    <div class="pl" id="header">
         <h1>Weather Watcher</h1>
 
         <div id="searchDiv">
-            <input style="padding:5px;vertical-align:middle;border-radius:10px;border:2px solid black;" type="search" placeholder="Enter the name of a city or country..." id="citySearch">
+            <input style="padding:5px;vertical-align:middle;border-radius:10px;border:2px solid black;width:300px;" type="search" placeholder="Enter the name of a city or country..." id="citySearch">
             <button style="vertical-align:middle;margin-left:10px;border:0px;background-color:rgba(0, 0, 0, 0.0);" id="searchButton"><span  class="iconify" data-icon="flat-color-icons:search"  width="40" height="40" data-inline="false"></span></button>
         </div>
     </div>
  
 
-    <div id="success">
+    <div class="pl" id="success">
         <div id="daily">
          <h2 style="font-size:1.5em;"><span id="city-title" style="padding-bottom:10px"></span>, <span id="country"> </span><span id="country-icon-container"><img id="country-icon" style="vertical-align:middle; padding:10px;"></span></h2>     
             <h3 style="font-size:1.25em;"><span id="date" ></span></h3>

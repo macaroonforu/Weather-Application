@@ -41,6 +41,7 @@ function search(){
 }
 
 function pageLoad(){
+    document.querySelector("body").style.display="none"; 
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=2172c71e82df4422b4e143223230209&q=toronto&days=3&aqi=no&alerts=no`, {mode: 'cors'})
     .then(response => {
         if (!response.ok) {
@@ -50,7 +51,6 @@ function pageLoad(){
     })
     .then(data => {
         document.getElementById("fail").style.display="none"; 
-        
         //console.log(data); 
         forecast(data.forecast.forecastday);
         console.log(slideIndex); 
@@ -59,8 +59,9 @@ function pageLoad(){
         document.querySelector(".prev").addEventListener("click", function() {plusSlides(-1);}); 
         document.querySelector(".next").addEventListener("click", function() {plusSlides(1);});
         current(data.current, data.location); 
-        document.getElementById("header").style.display="initial"; 
-        document.getElementById("success").style.display="initial";
+        document.querySelectorAll(".pl").forEach(item =>{
+            item.style.display="initial"; 
+        })
     })
     .catch(error => {
         const infodiv = document.getElementById("success");
