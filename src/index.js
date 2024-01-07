@@ -6,6 +6,12 @@ let slideIndex = 1;
 const button = document.getElementById("searchButton"); 
 button.addEventListener("click", search); 
 
+//Revisit this later to search when enter is pressed in addition to clicking on the icon 
+/*button.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      search(); 
+    }
+});*/
 
 function search(){
     console.log("hi"); 
@@ -27,10 +33,7 @@ function search(){
         showSlide(slideIndex); 
         document.querySelector(".prev").addEventListener("click", function() {plusSlides(-1);}); 
         document.querySelector(".next").addEventListener("click", function() {plusSlides(1);});
-        
-        
         document.getElementById("success").style.display="initial";
-    
     })
     .catch(error => {
         const infodiv = document.getElementById("success");
@@ -83,7 +86,6 @@ function showSlide(n) {
     let slides = document.getElementsByClassName("rowDiv"); 
     console.log(n); 
     console.log(slides); 
-    //let dots = document.getElementsByClassName("dot"); 
     if(n > slides.length){
         slideIndex = 1;
     }
@@ -95,13 +97,6 @@ function showSlide(n) {
     }
     console.log(n); 
     slides[slideIndex-1].style.display ="grid";
-
-    /*
-    for (let i=0; i<dots.length;i++){
-        dots[i].className = dots[i].className.replace("active", ""); 
-    }
-     
-    dots[slideIndex-1].className += " active"; */
 }
 
 pageLoad(); 

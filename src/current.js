@@ -1,14 +1,9 @@
 const {format} = require('date-fns');
 
-
-
-
 function current(mainData, location){
     //console.log("currentData", mainData);
     //console.log("Location", location); 
-
     const countrycode = countrycodes[location.country]; 
-    
     if(countrycode===undefined){
         document.getElementById("country-icon-container").innerHTML = `<img id="country-icon" style="vertical-align:middle; padding:10px;">`; 
 
@@ -17,21 +12,15 @@ function current(mainData, location){
         document.getElementById("country-icon").src  = `https://flagsapi.com/${countrycode}/flat/32.png`; 
 
     }
-
-
     document.getElementById("city-title").textContent = location.name; 
     document.getElementById("country").textContent = location.country; 
     document.getElementById("date").textContent = format(new Date(location.localtime),'EEEE MMMM do, yyyy p'); 
-
     document.getElementById("current_condition_text").textContent = mainData.condition.text; 
     document.getElementById("current_condition_img").src = mainData.condition.icon; 
     document.getElementById("current_temp").innerHTML = `${mainData.temp_c} &#176; C`; 
     document.getElementById("feels_like").innerHTML = `${mainData.feelslike_c}  &#176; C`; 
     document.getElementById("uv-index").textContent = mainData.uv; 
-    document.getElementById("wind").textContent = mainData.wind_kph; 
-
-
-    
+    document.getElementById("wind").textContent = mainData.wind_kph;     
 }
 
 const countrycodes = {'Afghanistan': 'AF',

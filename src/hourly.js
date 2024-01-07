@@ -1,6 +1,5 @@
 const {format} = require('date-fns');
 
-
 function hourly(data){
     //console.log("Hourly Data", data); 
     const hourly_grid = document.getElementById("hourly-grid"); 
@@ -26,12 +25,5 @@ function hourly(data){
     buttonDiv.classList.add("buttonDiv"); 
     hourly_grid.appendChild(buttonDiv); 
 }
-
-
-
-
-
-
-
 
 export default hourly; 

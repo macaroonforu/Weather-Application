@@ -15,16 +15,15 @@
     <title>Weather App</title>
 </head>
 <body class="pl">
+
     <div class="pl" id="header">
         <h1>Weather Watcher</h1>
-
         <div id="searchDiv">
             <input style="padding:5px;vertical-align:middle;border-radius:10px;border:2px solid black;width:250px;" type="search" placeholder="Enter the name of a city or country..." id="citySearch">
             <button style="vertical-align:middle;margin-left:10px;border:0px;background-color:rgba(0, 0, 0, 0.0);" id="searchButton"><span  class="iconify" data-icon="flat-color-icons:search"  width="40" height="40" data-inline="false"></span></button>
         </div>
     </div>
  
-
     <div class="pl" id="success">
         <div id="daily">
          <h2 style="font-size:1.5em;"><span id="city-title" style="padding-bottom:10px"></span>, <span id="country"> </span><span id="country-icon-container"><img id="country-icon" style="vertical-align:middle; padding:10px;"></span></h2>     
@@ -32,29 +31,21 @@
             <p style="font-size:1.25em;"><span id="current_condition_text"></span></p>
             <img id="current_condition_img">
             <p style="font-size:1.25em;">Current Temp: <span id="current_temp"></span>    Feels Like: <span id="feels_like"></span></p>
-            <p></p>
             <p style="font-size:1.25em;"><span class="iconify" data-icon="tabler:uv-index" data-inline="false"></span> UV Index: <span id="uv-index"></span></p>
             <p style="font-size:1.25em;"><span class="iconify" data-icon="ph:wind-bold" data-inline="false"></span> Wind: <span id="wind"></span> km/hr</p>
-
         </div>
     
         <div id="three-day">
             <h2>Three Day Forecast</h2>
-            <div id="three-day-grid">
-
-               
-                
+            <div id="three-day-grid"> 
             </div>
         </div>
 
         <div id="hourly">
             <h2>Hourly Forecast</h2>
             <div id="hourly-grid">
-
             </div>
         </div>
-
-
 
     </div>
 
