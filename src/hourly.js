@@ -3,10 +3,8 @@ const {format} = require('date-fns');
 
 function hourly(data){
     //console.log("Hourly Data", data); 
-
     const hourly_grid = document.getElementById("hourly-grid"); 
     hourly_grid.innerHTML=''; 
-
     for(let i=0; i<4;i++){
         const rowDiv = document.createElement('div'); 
         rowDiv.classList.add('rowDiv'); 
@@ -27,17 +25,6 @@ function hourly(data){
     <button class="next arrow"><span class="iconify front-arrow" data-icon="emojione:right-arrow" width="48" height="48" data-inline="false"></span></button>`
     buttonDiv.classList.add("buttonDiv"); 
     hourly_grid.appendChild(buttonDiv); 
-    
-    /*const dotDiv = document.createElement('div'); 
-    dotDiv.innerHTML = `<div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>`
-    
-    hourly_grid.appendChild(dotDiv);*/
-    /*document.querySelector(".prev").addEventListener("click", plusSlides(-1)); 
-    document.querySelector(".next").addEventListener("click", plusSlides(1)); */
 }
 
 
